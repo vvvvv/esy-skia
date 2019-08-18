@@ -14,6 +14,7 @@
 #include "sk_paint.h"
 #include "sk_shader.h"
 #include "sk_surface.h"
+#include "sk_general.h"
 
 extern void sk_test_c_api(sk_canvas_t*);
 
