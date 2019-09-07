@@ -229,8 +229,8 @@ static inline SkDocument::PDFMetadata AsDocumentPDFMetadata(const sk_document_pd
     md.fKeywords = AsDocumentOptionalString(metadata->fKeywords);
     md.fCreator = AsDocumentOptionalString(metadata->fCreator);
     md.fProducer = AsDocumentOptionalString(metadata->fProducer);
-    md.fCreation =  AsDocumentOptionalTimestamp(metadata->fCreation),
-    md.fModified =  AsDocumentOptionalTimestamp(metadata->fModified),
+    md.fCreation =  AsDocumentOptionalTimestamp(metadata->fCreation);
+    md.fModified =  AsDocumentOptionalTimestamp(metadata->fModified);
     md.fRasterDPI = metadata->fRasterDPI;
     md.fPDFA = metadata->fPDFA;
     md.fEncodingQuality = metadata->fEncodingQuality;
