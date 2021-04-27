@@ -813,6 +813,7 @@ typedef struct sk_xmlstreamwriter_t sk_xmlstreamwriter_t;
 typedef struct sk_xmlwriter_t sk_xmlwriter_t;
 
 typedef struct sk_svgcanvas_t sk_svgcanvas_t;
+typedef struct sk_svgdom_t sk_svgdom_t;
 
 typedef struct sk_3dview_t sk_3dview_t;
 

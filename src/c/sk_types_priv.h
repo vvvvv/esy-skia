@@ -110,6 +110,8 @@ DEF_CLASS_MAP(GrContext, gr_context_t, GrContext)
 DEF_CLASS_MAP(GrBackendTexture, gr_backendtexture_t, GrBackendTexture)
 DEF_CLASS_MAP(GrBackendRenderTarget, gr_backendrendertarget_t, GrBackendRenderTarget)
 
+DEF_CLASS_MAP(SkSVGDOM, sk_svgdom_t, SVGDOM)
+
 DEF_STRUCT_MAP(SkColorSpacePrimaries, sk_colorspaceprimaries_t, ColorSpacePrimaries)
 DEF_STRUCT_MAP(SkColorSpaceTransferFn, sk_colorspace_transfer_fn_t, ColorSpaceTransferFn)
 DEF_STRUCT_MAP(SkHighContrastConfig, sk_highcontrastconfig_t, HighContrastConfig)
