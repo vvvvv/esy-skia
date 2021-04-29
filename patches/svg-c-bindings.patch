@@ -31,7 +31,7 @@ index fa24d1ce0d..4cfeda87ed 100644
  typedef struct sk_3dview_t sk_3dview_t;
  
 diff --git a/src/c/sk_svg.cpp b/src/c/sk_svg.cpp
-index 01799b8799..1a89349784 100644
+index 01799b8799..c31d5d4fc8 100644
 --- a/src/c/sk_svg.cpp
 +++ b/src/c/sk_svg.cpp
 @@ -9,6 +9,11 @@
@@ -46,7 +46,7 @@ index 01799b8799..1a89349784 100644
  #include "sk_svg.h"
  
  #include "sk_types_priv.h"
-@@ -18,3 +23,26 @@
+@@ -18,3 +23,33 @@
  sk_canvas_t* sk_svgcanvas_create(const sk_rect_t* bounds, sk_xmlwriter_t* writer) {
      return ToCanvas(SkSVGCanvas::Make(*AsRect(bounds), AsXMLWriter(writer)).release());
  }
@@ -69,8 +69,15 @@ index 01799b8799..1a89349784 100644
 +}
 +
 +sk_svgdom_t *sk_svgdom_create_from_stream(sk_stream_t *stream) {
-+    std::unique_ptr<SkStream> skstream(AsStream(stream));
-+    return ToSVGDOM(SkSVGDOM::MakeFromStream(*skstream).release());
++    return ToSVGDOM(SkSVGDOM::MakeFromStream(*AsStream(stream)).release());
++}
++
++void sk_svgdom_ref(const sk_svgdom_t *svg) {
++    SkSafeRef(AsSVGDOM(svg));
++}
++
++void sk_svgdom_unref(const sk_svgdom_t *svg) {
++    SkSafeUnref(AsSVGDOM(svg));
 +}
 +#endif
 diff --git a/src/c/sk_types_priv.h b/src/c/sk_types_priv.h
