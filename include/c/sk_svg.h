@@ -23,6 +23,8 @@ SK_C_API void sk_svgdom_set_container_size(sk_svgdom_t *svgdom, float width, flo
 SK_C_API float sk_svgdom_get_container_width(sk_svgdom_t *svgdom);
 SK_C_API float sk_svgdom_get_container_height(sk_svgdom_t *svgdom);
 SK_C_API sk_svgdom_t *sk_svgdom_create_from_stream(sk_stream_t *stream);
+SK_C_API void sk_svgdom_ref(const sk_svgdom_t *svg);
+SK_C_API void sk_svgdom_unref(const sk_svgdom_t *svg);
 #endif
 
 SK_C_PLUS_PLUS_END_GUARD
