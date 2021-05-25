@@ -2,6 +2,7 @@
 
 # Windows executables
 *.exe      binary
+*.dll      binary
 
 # Archives
 *.7z       binary
