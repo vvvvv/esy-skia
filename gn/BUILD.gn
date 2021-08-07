@@ -411,7 +411,7 @@ config("warnings") {
       "-Wno-maybe-uninitialized",
     ]
     cflags_cc += [
-     "-Wnon-virtual-dtor",
+      "-Wnon-virtual-dtor",
       "-Wno-noexcept-type",
 
       # GCC 8+ bundles a number of fundamentally different warnings under this same flag,
@@ -428,6 +428,19 @@ config("warnings") {
       "-fcolor-diagnostics",
       "-Weverything",
       "-Wno-unknown-warning-option",  # Let older Clangs ignore newer Clangs' warnings.
+
+      # clang 10 fixes
+      "-Wno-anon-enum-enum-conversion",
+      "-Wno-sizeof-array-div",
+
+      # clang 10.2 fixes
+      "-Wno-psabi",
+      "-Wno-suggest-destructor-override",
+      "-Wno-suggest-override",
+      "-Wno-uninitialized-const-reference",
+
+      # macOS cross-compilation fix
+      "-Wno-poison-system-directories",
     ]
 
     if (target_cpu == "arm" && is_ios) {
