@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 OS=$1
 ESY_LIBJPEG_TURBO_PREFIX=$2
